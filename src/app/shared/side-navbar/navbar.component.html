@@ -1,10 +1,6 @@
-<nav
-  class="navbar navbar-expand-lg fixed-top navbar-transparent"
-  color-on-scroll="500"
->
+<nav class="side" color-on-scroll="500">
   <div class="container">
     <div class="navbar-translate">
-      <a class="navbar-brand">UI Kit</a>
       <button
         class="navbar-toggler navbar-burger"
         type="button"
@@ -22,18 +18,11 @@
     </div>
     <div>
       <ul>
-        <li class="nav-item" *ngIf="!isHome()">
-          <a
-            [routerLink]="['/home']"
-            *ngIf="!isDocumentation()"
-            class="nav-link"
-            ><i class="nc-icon nc-layout-11"></i>Components</a
-          >
-          <a [routerLink]="['/home']" *ngIf="isDocumentation()" class="nav-link"
-            >Back to Kit</a
-          >
+        <li *ngFor="let item of navList">
+          <span  class="list-item" (click)="scrollTo(item.id)">
+            <span class="name">{{ item.name }}</span>
+          </span>
         </li>
-        
       </ul>
     </div>
   </div>

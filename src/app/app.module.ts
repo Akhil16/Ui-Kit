@@ -10,13 +10,14 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
 import { ComponentsModule } from './components/components.module';
-import { ExamplesModule } from './examples/examples.module';
+import { SideNavbarComponent } from './shared/side-navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    SideNavbarComponent,
     FooterComponent
   ],
   imports: [
@@ -25,7 +26,6 @@ import { ExamplesModule } from './examples/examples.module';
     FormsModule,
     RouterModule,
     ComponentsModule,
-    ExamplesModule,
     AppRoutingModule,
   ],
   providers: [],
